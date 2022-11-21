@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:activityapp/homme.dart';
 import 'package:activityapp/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -151,13 +152,22 @@ class _UserInfoState extends State<UserInfo> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Icon(
-                              Icons.person,
-                              // size: 200,
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Image.network(
+                                'https://gpalma.pt/articles/1_PAWkDZaDOD880LnFcOMUfQ.png',
+                                fit: BoxFit.cover,
+                                width: 100,
+                                height: 30,
+                              ),
                             ),
-                            Icon(
-                              Icons.person,
-                              // size: 200,
+                            
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Container(
+                                width: 67,
+                                child:Text('CLINIQUE'),
+                              ),
                             ),
 
                           ],
@@ -166,13 +176,51 @@ class _UserInfoState extends State<UserInfo> {
                         Row(
                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Icon(
-                              Icons.person,
-                              // size: 200,
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Container(
+                                width: 80,
+                                height: 30,
+                                decoration: new BoxDecoration(
+                                  color: Colors.blue,
+                                  
+                                ),
+                                
+                                child: TextButton(  
+                                  child: Text('Envoyer'),
+                                  style: ButtonStyle(
+                                    foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                                  ),    
+                                  onPressed: () {/** */
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => const Homme()),
+                                    );
+                                  },  
+                                ),
+                              ),
                             ),
-                            Icon(
-                              Icons.person,
-                              // size: 200,
+                            SizedBox(
+                                  width: 5.6,
+                                ),
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Container(
+                                width: 80,
+                                height: 30,
+                                decoration: new BoxDecoration(
+                                  color: Colors.blue,
+                                  
+                                ),
+                                child: TextButton(  
+                                  child: Text('Annuler'),  
+                                  style: ButtonStyle(
+                                    foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                                  ), 
+                                  // color: Colors.lightGreen,  
+                                  onPressed: () {/** */},  
+                                ),
+                              ),
                             ),
 
                           ],
