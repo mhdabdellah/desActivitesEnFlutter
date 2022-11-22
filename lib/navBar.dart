@@ -1,3 +1,5 @@
+import 'package:activityapp/homme.dart';
+import 'package:activityapp/userInfo.dart';
 import 'package:flutter/material.dart';
 
 class NavBar extends StatelessWidget {
@@ -107,12 +109,21 @@ class NavBar extends StatelessWidget {
                   title: Text('Calendrier'),
                   onTap: () => Navigator.pop(context),
                 ),
-                // Divider(),
-                // ListTile(
-                //   leading: Icon(Icons.settings),
-                //   title: Text('Settings'),
-                //   onTap: () => null,
-                // ),
+                Divider(),
+                ListTile(
+                  leading: Icon(Icons.arrow_circle_left_sharp ,
+                    color: Colors.black,
+                  ),
+                  title: Text(' Retour '),
+                  onTap: (){
+                    print("back");
+                     Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => const UserInfo()),
+                                    );
+                        
+                  }
+                ),
                 // ListTile(
                 //   leading: Icon(Icons.description),
                 //   title: Text('Policies'),

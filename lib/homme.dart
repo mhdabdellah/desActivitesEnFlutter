@@ -19,7 +19,22 @@ class _HommeState extends State<Homme> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("title")),
+      appBar: AppBar(title: Text(" Crrection des Activites"),
+        // actions: [
+        //   TextButton(onPressed:() {
+        //             print("back");
+        //              Navigator.push(
+        //                               context,
+        //                               MaterialPageRoute(builder: (context) => const Homme()),
+        //                             );
+                        
+        //           }, child: Icon(Icons.arrow_circle_left_sharp ,
+        //             color: Colors.black,
+        //           ),)
+        // ],
+
+      ),
+      
       body: Stack(
         children: [
           Container(
